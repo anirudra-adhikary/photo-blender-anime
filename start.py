@@ -46,4 +46,4 @@ def blend_images(image_path1, image_path2, output_path):
     blended_image.save(output_path)
 
 # Example usage
-blend_images('img1.png', 'img2.png', 'blended_image.jpg')
+blend_images('img1.png', 'img2.png', 'blended.jpg')

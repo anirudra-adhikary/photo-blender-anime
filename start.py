@@ -47,3 +47,5 @@ def blend_images(image_path1, image_path2, output_path):
 
 # Example usage
 blend_images('img1.png', 'img2.png', 'photo_blended.jpg')
+
+# this line is for test

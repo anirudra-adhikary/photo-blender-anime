@@ -2,6 +2,7 @@ import torch
 from diffusers import StableDiffusionPipeline
 from PIL import Image
 import numpy as np
+import platform
 
 def blend_images(image_path1, image_path2, output_path):
     # Load the stable diffusion pipeline
@@ -46,6 +47,11 @@ def blend_images(image_path1, image_path2, output_path):
     blended_image.save(output_path)
 
 # Example usage
-blend_images(r'd:\Code\Python\Persistent Ventures\photo-blender-anime\img1.png', 
-             r'd:\Code\Python\Persistent Ventures\photo-blender-anime\img2.png', 
-             'photo_blended.jpg')
+if __name__ == "__main__":
+    if platform.system() == 'Windows':
+        blend_images(r'd:\Code\Python\Persistent Ventures\photo-blender-anime\img1.png', 
+                r'd:\Code\Python\Persistent Ventures\photo-blender-anime\img2.png', 
+                'photo_blended.jpg')
+    elif platform.system == 'Linux':
+        blend_images('img1.png', 'img2.png','photo_blended.jpg')
+    

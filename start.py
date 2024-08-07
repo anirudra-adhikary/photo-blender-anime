@@ -32,7 +32,7 @@ def blend_images(image_path1, image_path2, output_path):
     combined_image.save(temp_combined_image_path)
 
     # Create a custom prompt for blending
-    prompt = "A natural blend of the two pictures as if the two persons are in the same picture but not like a collage"
+    prompt = "A realistic photo of two people standing side-by-side, one on the left and one on the right, both looking at the camera."
 
     # Generate the blended image using stable diffusion
     generated_images = pipe(
@@ -46,6 +46,6 @@ def blend_images(image_path1, image_path2, output_path):
     blended_image.save(output_path)
 
 # Example usage
-blend_images('img1.png', 'img2.png', 'photo_blended.jpg')
-
-# this line is for test
+blend_images(r'd:\Code\Python\Persistent Ventures\photo-blender-anime\img1.png', 
+             r'd:\Code\Python\Persistent Ventures\photo-blender-anime\img2.png', 
+             'photo_blended.jpg')
